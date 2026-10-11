@@ -38,6 +38,9 @@ public class SecurityConfig {
 
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
+                // Public root and health endpoints
+                .requestMatchers("/", "/actuator/health").permitAll()
+
                 // Login and registration
                 .requestMatchers("/api/auth/**").permitAll()
 
