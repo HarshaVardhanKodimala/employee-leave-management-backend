@@ -84,10 +84,12 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-
-        configuration.setAllowedOrigins(
-            Arrays.asList("http://localhost:5173")
-        );
+configuration.setAllowedOrigins(
+    Arrays.asList(
+        "http://localhost:5173",
+        "https://employee-leave-management-frontend-ruddy.vercel.app"
+    )
+);
 
         configuration.setAllowedMethods(
             Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")
